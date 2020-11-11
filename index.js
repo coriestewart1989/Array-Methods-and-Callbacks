@@ -98,7 +98,8 @@ Write a function called `getAverageGoals` that accepts a parameter `data` and re
 function getAverageGoals(data) {
     const homeAvg = data.map((element) => element["Home Team Goals"])
     const awayAvg = data.map((element) => element["Away Team Goals"])
-    return `Home Team Average: ${homeAvg.reduce((a,b)=> a+b) / homeAvg.length} Away Team Average;${awayAvg.reduce((a,b) => a+b) / awayAvg.length}`
+    return `${homeAvg.reduce((a,b)=> a+b) / homeAvg.length + awayAvg.reduce((a,b) => a+b) / awayAvg.length}`
+
 }
 getAverageGoals(fifaData)
 
